@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+  /* colors */
+  /* primary */
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-red: hsl(0, 100%, 67%);
+
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+
+  --fs-input: 1.8rem;
+  --fs-result: 2rem;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+}
+
+input{
+  font-family: inherit;
+}
+
+/* utility */
+.poppins-bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-regular-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.fs-input {
+  font-size: var(--fs-input);
+}
+
+.fs-result {
+  font-size: var(--fs-result);
+}
+
+/* custom */
+
+body {
+  background-color: var(--light-grey);
+  max-width: 1440px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.card {
+  background-color: var(--white);
+  width: 600px;
+  margin-bottom: 2em;
+  padding: 2em;
+  border-radius: 1rem 1rem 5rem 1rem;
+}
+
+input {
+  width: 70px;
+  padding: 8px;
+  height: 2.5em;
+  border-radius: 4px;
+  border: 2px solid var(--light-grey);
+}
+
+input:hover {
+  border: 2px solid var(--primary-purple);
+}
+
+label {
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 2px;
+  color: var(--smokey-gray);
+}
+
+.card-header {
+  gap: 20px;
+}
+
+.divider {
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--smokey-gray);
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: var(--primary-purple);
+}
+
+button:hover {
+  background-color: var(--off-black);
+}
+
+span {
+  color: var(--primary-purple);
+}
+
+.output {
+  font-size: var(--fs-result);
+}
+
+small {
+  color: red;
+  font-size: .5rem;
+}
