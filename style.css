@@ -150,6 +150,14 @@ span {
   font-size: var(--fs-result);
 }
 
+@media screen and (max-width: 457px) {
+  .output h1 {
+    font-size: 3rem;
+  }
+
+}
+
+
 small {
   color: red;
   font-size: .5rem;
