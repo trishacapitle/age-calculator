@@ -90,6 +90,12 @@ body {
   border-radius: 1rem 1rem 5rem 1rem;
 }
 
+@media screen and (max-width: 640px) {
+  .card {
+    width: 90vw;
+  }
+}
+
 input {
   width: 70px;
   padding: 8px;
