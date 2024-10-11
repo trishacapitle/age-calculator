@@ -155,6 +155,10 @@ span {
     font-size: 3rem;
   }
 
+  .divider {
+    margin-top: 20px;
+  }
+  
 }
 
 
