@@ -15,6 +15,12 @@
 
   --fs-input: 1.8rem;
   --fs-result: 2rem;
+
+  /* toggle colors */
+  --toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --toggle-light: hsl(230, 22%, 74%);
+  --top-bg-dark: hsl(232, 19%, 15%);
+  --top-bg-light: hsl(225, 100%, 98%);
 }
 
 /* reset */
@@ -58,8 +64,16 @@ input{
   display: grid;
 }
 
+.gap-12 {
+  gap: 12px;
+}
+
 .flex-column {
   flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .fs-input {
@@ -68,6 +82,10 @@ input{
 
 .fs-result {
   font-size: var(--fs-result);
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 /* custom */
@@ -161,8 +179,55 @@ span {
   
 }
 
-
 small {
   color: red;
   font-size: .5rem;
 }
+
+/* toggle switch */
+.toggle .dark-mode {
+  display: none;
+  }
+  
+  input[type=checkbox]{
+      height: 0;
+      width: 0;
+      visibility: hidden;
+  }
+  
+  .toggle-label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 40px;
+      height: 20px;
+      background: var(--toggle-light);
+      display: block;
+      border-radius: 100px;
+      position: relative;
+  }
+  
+  .toggle-label:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 15px;
+      height: 15px;
+      background: var(--top-bg-light);
+      border-radius: 90px;
+      transition: 0.3s;
+  }
+  
+  input:checked + .toggle-label {
+      background: var(--toggle-dark);
+  }
+  
+  input:checked + .toggle-label:after {
+      left: calc(100% - 2px);
+      transform: translateX(-100%);
+      background: var(--top-bg-dark);
+  }
+  
+  .toggle-label:active:after {
+      width: 30px;
+  }
