@@ -63,7 +63,6 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Facebook - [@trishacapitle01](https://www.facebook.com/trishacapitle01/)
 
 
